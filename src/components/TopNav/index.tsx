@@ -4,6 +4,7 @@ import React from 'react';
 import UserOptions from './UserOptions';
 import ContactLinks from './ContactLinks';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function TopNav() {
 	return (
@@ -12,11 +13,13 @@ export default function TopNav() {
 				<UserOptions />
 			</span>
 			<span className="col-span-4 flex items-center justify-center">
-				<img
-					src="https://bravaland.com/cdn/shop/files/Artboard_1.png?v=1678787853"
-					alt="brava logo"
-					className="w-40"
-				/>
+				<Link href={'/'}>
+					<img
+						src="https://bravaland.com/cdn/shop/files/Artboard_1.png?v=1678787853"
+						alt="brava logo"
+						className="w-40"
+					/>
+				</Link>
 			</span>
 			<span className="col-span-3">
 				<ContactLinks />
