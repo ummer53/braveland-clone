@@ -1,4 +1,5 @@
-import Image from 'next/image';
+import Banner from './Banner';
+import SlideSection from './SlideSection';
 
 export default function Home() {
 	return (

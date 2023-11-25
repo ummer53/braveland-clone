@@ -2,8 +2,6 @@
 
 import React from 'react';
 
-import { Paper, Button } from '@mui/material';
-import './slide.css';
 import { useEffect } from 'react';
 
 interface Props {
@@ -26,7 +24,7 @@ export default function SlideSectionCarousel({ children }: Props) {
 		<div className="carousel-container overflow-hidden w-full h-40">
 			<div
 				className="carousel-track flex h-full gap-4 animate-infinite-scroll"
-				araia-hidden={true}
+				aria-hidden={true}
 			>
 				{children!.map((item: React.JSX.Element, index: number) => (
 					<span
@@ -39,8 +37,4 @@ export default function SlideSectionCarousel({ children }: Props) {
 			</div>
 		</div>
 	);
-}
-
-function Item(props: any) {
-	return <Paper className="flex ">{props.item}</Paper>;
 }

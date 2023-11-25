@@ -1,11 +1,10 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import AnnouncementBar from '@/components/AnnouncementBar';
-import TopNav from '@/components/TopNav';
-import Banner from '@/components/Banner';
-// import SlidePortion from '@/components/SlidingComponent/SlidePortion';
-import SlidingSection from '@/components/SlidingComponent';
+import { AnnouncementBar } from '@/components';
+import { TopNav } from '@/components';
+import Banner from './Banner';
+import SlideSection from './SlideSection';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -25,7 +24,8 @@ export default function RootLayout({
 				<AnnouncementBar announcement="This is an announcement" />
 				<TopNav />
 				<Banner />
-				<SlidingSection />
+				<SlideSection />
+
 				{children}
 			</body>
 		</html>

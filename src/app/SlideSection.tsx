@@ -1,10 +1,8 @@
 import React from 'react';
-import SlideSectionCarousel from './SlideSectionCarousel';
 import Image from 'next/image';
+import { SlideCarousel } from '@/components';
 
-type Props = {};
-
-export default function SlidePortion({}: Props) {
+export default function SlideSection() {
 	const slidePortionList = [
 		{
 			image: 's1.svg',
@@ -28,7 +26,7 @@ export default function SlidePortion({}: Props) {
 	return (
 		<div>
 			<div className=" carousel-div flex flex-row justify-evenly items-center gap-6  w-full p-4">
-				<SlideSectionCarousel>
+				<SlideCarousel>
 					{slidePortionList.map((slidePortion, index) => (
 						<div
 							key={index}
@@ -47,7 +45,7 @@ export default function SlidePortion({}: Props) {
 							</span>
 						</div>
 					))}
-				</SlideSectionCarousel>
+				</SlideCarousel>
 			</div>
 		</div>
 	);
