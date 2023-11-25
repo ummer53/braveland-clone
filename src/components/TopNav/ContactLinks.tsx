@@ -5,6 +5,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
+import Link from 'next/link';
 
 export default function ContactLinks() {
 	const contactLinkList = [
@@ -40,7 +41,9 @@ export default function ContactLinks() {
 		<div className="flex flex-row justify-evenly items-center  w-full">
 			{contactLinkList.map((contactLink, index) => (
 				<div key={index}>
-					{contactLink.icon ? contactLink.icon : contactLink.text}
+					<Link href={'/'}>
+						{contactLink.icon ? contactLink.icon : contactLink.text}
+					</Link>
 				</div>
 			))}
 		</div>
